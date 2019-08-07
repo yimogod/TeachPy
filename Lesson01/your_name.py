@@ -1,2 +1,2 @@
 name = input("你的名字是啥? \n")
-print("你好", name, name, name, name)
+print("你好", name)
