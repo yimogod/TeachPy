@@ -1,3 +1,21 @@
-a=input("你的名字是啥?")
-print("你好,你叫啥?    ",a)
+hj=input("what is your\n")
+print("hello")
+for x in range(123):
+    print(hj, end=' ')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
