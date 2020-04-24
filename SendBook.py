@@ -77,7 +77,7 @@ def get_chat(token):
     print(content)
     groups = content.get("data")["groups"]
     for g in groups:
-        if g["name"] == "平台功能组":
+        if g["name"] == "剑二程序群":
             return g["chat_id"]
     return None
 
@@ -130,10 +130,13 @@ def send_message2(token, image_key, chat_id):
 
 
 access_token = get_tenant_access_token()
-#image_key = upload_image(access_token, "./1.png")
-image_key = "img_32a63ed8-5d0f-4957-a421-280d713a4dfg"
+image_key = upload_image(access_token, "./1.png")
+#image_key = "img_32a63ed8-5d0f-4957-a421-280d713a4dfg"
 print(image_key)
-chat_id = get_chat(access_token)
-print(chat_id)
-send_message2(access_token, image_key, chat_id)
+#chat_id 固定的. 获取玩一次就可以了 
+#chat_id = get_chat(access_token)
+#print(chat_id)
+chat_id = "oc_f4113243b2e5526d52eb0e571fc0eab2"
+
+#send_message2(access_token, image_key, chat_id)
 
