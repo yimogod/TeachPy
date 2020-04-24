@@ -15,6 +15,7 @@ GitName2RealName = {
     "leilei2": "雷磊",
     "Li Di": "李迪",
     "zhaoxu1": "赵旭",
+    "zhaohaiyang":"赵海洋",
     "wangqinyin": "王勤印",
     "shuiliu-pc": "税柳",
     "shuiliu": "税柳",
@@ -83,6 +84,9 @@ if __name__=="__main__":
         file.close()
 
 
+    if len(formated_name_dict) == 0:
+        return
+
     # 名字列表和错误数列表
     name_list = []
     errorcount_list = []
@@ -105,7 +109,6 @@ if __name__=="__main__":
 
     # Plot
     plt.pie(errorcount_list, labels=name_list, autopct=autopct, shadow=False, startangle=90)
-
     plt.axis('equal')
 
     # plt.show()

@@ -137,6 +137,5 @@ print(image_key)
 #chat_id = get_chat(access_token)
 #print(chat_id)
 chat_id = "oc_f4113243b2e5526d52eb0e571fc0eab2"
-
-#send_message2(access_token, image_key, chat_id)
+send_message2(access_token, image_key, chat_id)
 
