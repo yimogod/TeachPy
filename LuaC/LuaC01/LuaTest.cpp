@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
 	auto result = lua_checkstack(L, 2);
 	cout << "statck enougth for 2 --" << result << endl;
 
-
+	auto num =  lua_gettop(L);//返回栈上元素的个数
+	cout << "statck num is " << num << endl;
 
 	lua_close(L);
 	/* pause */
