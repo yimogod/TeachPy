@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <iostream>
 
 using namespace std;
@@ -12,8 +12,8 @@ extern "C" {
 
 lua_State* L;
 
-//²âÊÔ¶ÑÕ»
-int main(int argc, char *argv[])
+//æµ‹è¯•å †æ ˆ
+int main(int argc, char* argv[])
 {
 	L = luaL_newstate();
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	auto result = lua_checkstack(L, 2);
 	cout << "statck enougth for 2 --" << result << endl;
 
-	auto num =  lua_gettop(L);//·µ»ØÕ»ÉÏÔªËØµÄ¸öÊý
+	auto num = lua_gettop(L);//è¿”å›žæ ˆä¸Šå…ƒç´ çš„ä¸ªæ•°
 	cout << "statck num is " << num << endl;
 
 	lua_close(L);
