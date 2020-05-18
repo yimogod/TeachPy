@@ -15,21 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LuaTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="LuaHelper.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Test.lua">
+    <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
-    </None>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LuaHelper.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test01.lua">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Test02.lua">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Test03.lua">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Test04.lua">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
