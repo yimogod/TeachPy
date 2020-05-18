@@ -20,7 +20,19 @@ print(getmetatable(src)) -- now is mt2
 src = {}
 
 local mt_mt = {}
+mt_mt.__index = function(table, key)
+    return mt_mt[key]
+end
+
+
 mt = {}
+mt.__index = function(table, key)
+    return mt[key]
+end
+
+mt_mt.dd = 1
+--mt.dd = 2
+
 setmetatable(mt, mt_mt)
 setmetatable(src, mt)
 
@@ -32,4 +44,7 @@ print(s1)
 
 print("meta meta is ")
 print(s2)
+
+print("src dd is ")
+print(src.dd)
 

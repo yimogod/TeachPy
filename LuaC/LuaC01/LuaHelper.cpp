@@ -1,9 +1,12 @@
+ï»¿#include <iostream>
 #include "LuaHelper.h"
 
 void LuaHelper::stackDump(lua_State* L)
 {
+
+	std::cout << std::endl << "------------>> now stack dump is bellow " << std::endl;
 	int i;
-	int top = lua_gettop(L); //»ñÈ¡Õ»ÉÏÔªËØ¸öÊý
+	int top = lua_gettop(L); //èŽ·å–æ ˆä¸Šå…ƒç´ ä¸ªæ•°
 	for (i = 1; i <= top; i++) {
 		int t = lua_type(L, i);
 		switch (t) {
@@ -15,7 +18,7 @@ void LuaHelper::stackDump(lua_State* L)
 			printf(lua_toboolean(L, i) ? "true" : "false");
 			break;
 		}
-		case LUA_TNUMBER: { //TNUMBER°üº¬Á½ÖÖÀàÐÍ floatºÍinteger
+		case LUA_TNUMBER: { //TNUMBERåŒ…å«ä¸¤ç§ç±»åž‹ floatå’Œinteger
 			if (lua_isinteger(L, i)) //integer
 				printf("%lld", lua_tointeger(L, i));
 			else
@@ -30,4 +33,7 @@ void LuaHelper::stackDump(lua_State* L)
 		}
 		printf("\n");
 	}
+
+	auto num = lua_gettop(L);//è¿”å›žæ ˆä¸Šå…ƒç´ çš„ä¸ªæ•°
+	std::cout << "------------>>  statck num is " << num << std::endl << std::endl;
 }
